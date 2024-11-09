@@ -1,13 +1,81 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
+<html>
+<head>
+    <title>PAWS</title>
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <script type="text/babel">
+        function App() {
+            return (
+                <div className="flex flex-col items-center justify-between h-screen p-4">
+                    <header className="flex items-center justify-between w-full">
+                        <div className="text-xl font-bold">PAWS <i class="fas fa-check-circle text-blue-500"></i></div>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </header>
+                    <div className="w-full">
+                        <button className="flex items-center justify-between w-full p-2 mb-4 text-black bg-blue-500 rounded">
+                            <span>Check the footprint map</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <div className="flex items-center justify-center w-full mb-4">
+                            <button className="flex items-center justify-center w-full p-2 text-black bg-blue-500 rounded">
+                                <span>UQBDay...PVlw</span>
+                                <i class="fas fa-caret-down ml-2"></i>
+                            </button>
+                        </div>
+                        <div className="flex flex-col items-center mb-4">
+                            <i class="fas fa-paw text-6xl mb-2"></i>
+                            <div className="text-4xl font-bold">14,250 PAWS</div>
+                            <div className="text-sm">LEGEND <i class="fas fa-star text-yellow-500"></i> RANK</div>
+                        </div>
+                        <div className="w-full mb-4">
+                            <button className="flex items-center justify-between w-full p-4 mb-2 text-white bg-gray-800 rounded">
+                                <i class="fas fa-users"></i>
+                                <span>Join our community</span>
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <button className="flex items-center justify-between w-full p-4 text-white bg-gray-800 rounded">
+                                <i class="fas fa-gift"></i>
+                                <span>Check your rewards</span>
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <footer className="flex justify-between w-full p-4 bg-gray-900 rounded-t-lg">
+                        <div className="flex flex-col items-center">
+                            <i class="fas fa-home text-blue-500"></i>
+                            <span className="text-xs">Home</span>
+                        </div>
+                        <div className="flex flex-col items-center">
+                            <i class="fas fa-trophy"></i>
+                            <span className="text-xs">Leaderboard</span>
+                        </div>
+                        <div className="flex flex-col items-center">
+                            <i class="fas fa-user-friends"></i>
+                            <span className="text-xs">Friends</span>
+                        </div>
+                        <div className="flex flex-col items-center">
+                            <i class="fas fa-coins"></i>
+                            <span className="text-xs">Earn</span>
+                        </div>
+                    </footer>
+                </div>
+            );
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
 </html>
